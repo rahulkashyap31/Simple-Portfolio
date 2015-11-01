@@ -1,2 +1,1 @@
-A very very simple Portfolio profile.
-It could be a Portfolio or not.
+A very very simple Portfolio profile and It could be a Portfolio or not.
