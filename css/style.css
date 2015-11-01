@@ -1,4 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Asap);
+/* -------------------------------------------------------------
+ *  Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+ *  By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+ *
+ *  List of CSS3 Sass Mixins File to be @imported and @included as you need
+ *
+ *  The purpose of this library is to facilitate the use of CSS3 on different browsers avoiding HARD TO READ and NEVER
+ *  ENDING css files
+ *
+ *  note: All CSS3 Properties are being supported by Safari 5
+ *  more info: http://www.findmebyip.com/litmus/#css3-properties
+ *
+ *------------------------------------------------------------- */
+html {
+  height: 100%;
+}
+
 body, h1, p {
   margin: 0;
   padding: 0;
@@ -8,11 +25,10 @@ body, h1, p {
 }
 
 body {
-  background-image: url("../img/gradiant.png");
+  background-image: url("../img/gradiant.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
 }
 
 * {
@@ -22,17 +38,21 @@ body {
 .wrapper {
   width: 500px;
   margin: 40px auto 0px;
-  height: 100vh;
 }
 
 .avatar img {
   -webkit-border-radius: 50%;
+  -khtml-border-radius: 50%;
   -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
   border-radius: 50%;
-  -webkit-box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.66);
-  -moz-box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.66);
-  -o-box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.66);
-  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.66);
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.66);
+  -khtml-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.66);
+  -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.66);
+  -ms-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.66);
+  -o-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.66);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.66);
 }
 
 .avatar h1 {
@@ -45,8 +65,8 @@ body {
 }
 
 .about {
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
   padding: 30px 15px;
   margin: 30px 0;
 }
@@ -64,11 +84,16 @@ body {
   padding: 15px;
   font-size: 145%;
   -webkit-border-radius: 50%;
+  -khtml-border-radius: 50%;
   -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
   border-radius: 50%;
   -webkit-transition: all 0.2s ease-in-out;
+  -khtml-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
-  -ot-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
@@ -84,8 +109,20 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
+  html {
+    height: auto;
+  }
+  body {
+    overflow: scroll;
+  }
   .wrapper {
     width: 100%;
-    margin: 40px auto 0px;
+    margin: 40px auto 20px;
+  }
+  .avatar {
+    padding: 0 10px;
+  }
+  .scoial-existance .mail-me {
+    color: #fff;
   }
 }
